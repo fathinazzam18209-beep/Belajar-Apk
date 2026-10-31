@@ -1,0 +1,149 @@
+/* Header */
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.header h1 { font-size: var(--fs-lg); }
+.header .sub { font-size: var(--fs-sm); color: var(--text-muted); }
+.icon-btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--surface); display: grid; place-items: center;
+}
+
+/* Kartu saldo utama */
+.balance-card {
+  background: linear-gradient(135deg, #5a5df0 0%, #3b3ec4 100%);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 32px rgba(79, 82, 232, 0.35);
+}
+.balance-card .label { font-size: var(--fs-sm); opacity: 0.8; }
+.balance-card .amount { font-size: var(--fs-xl); font-weight: 700; margin: 6px 0 14px; }
+.balance-card .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  font-size: var(--fs-xs); padding: 6px 10px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Section */
+.section-title { display: flex; justify-content: space-between; align-items: baseline; margin: 24px 0 12px; }
+.section-title h2 { font-size: var(--fs-lg); }
+.section-title .link { font-size: var(--fs-sm); color: var(--text-muted); }
+
+/* Grid grup akun (4 grup PRD) */
+.group-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.group-tile {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px; text-align: left;
+  display: flex; flex-direction: column; gap: 10px; min-height: 112px;
+}
+.group-tile .ico {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #fff; color: #111; display: grid; place-items: center;
+}
+.group-tile .name { font-size: var(--fs-sm); color: var(--text-muted); }
+.group-tile .value { font-size: var(--fs-md); font-weight: 600; margin-top: auto; }
+
+/* Aksi cepat */
+.quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.quick button {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 8px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-size: var(--fs-sm); min-height: 44px;
+}
+.quick .income { color: var(--income); }
+.quick .expense { color: var(--expense); }
+.quick .transfer { color: var(--text); }
+
+/* Kartu / empty state */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+.empty { text-align: center; padding: 28px 16px; color: var(--text-muted); }
+.empty strong { display: block; color: var(--text); margin-bottom: 6px; }
+.badge {
+  display: inline-block; margin-top: 10px; font-size: var(--fs-xs);
+  padding: 4px 10px; border-radius: 999px; background: var(--primary-soft); color: #aeb0ff;
+}
+
+/* Navigasi bawah */
+.nav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  background: rgba(15, 17, 40, 0.92); backdrop-filter: blur(14px);
+  border-top: 1px solid var(--border);
+  padding-bottom: var(--safe-bottom);
+}
+.nav-inner {
+  max-width: 480px; margin: 0 auto; height: var(--nav-h);
+  display: grid; grid-template-columns: repeat(5, 1fr); align-items: center;
+}
+.nav a {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  font-size: 0.6875rem; color: var(--text-muted); text-decoration: none; min-height: 44px; justify-content: center;
+}
+.nav a[aria-current='page'] { color: #fff; }
+.nav .fab {
+  width: 52px; height: 52px; border-radius: 50%; margin: -22px auto 0;
+  background: var(--primary); color: #fff; display: grid; place-items: center;
+  box-shadow: 0 8px 20px rgba(79, 82, 232, 0.5);
+}
+
+/* Notifikasi update PWA */
+.toast {
+  position: fixed; left: 16px; right: 16px; bottom: calc(var(--nav-h) + var(--safe-bottom) + 12px);
+  max-width: 448px; margin: 0 auto; z-index: 20;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px; display: flex; gap: 12px; align-items: center; justify-content: space-between;
+  font-size: var(--fs-sm);
+}
+.toast button { background: var(--primary); color: #fff; padding: 10px 14px; border-radius: 999px; min-height: 44px; }
+.toast .ghost { background: transparent; color: var(--text-muted); }
+
+/* Banner offline */
+.offline {
+  background: var(--warn); color: #231a00; text-align: center;
+  font-size: var(--fs-xs); padding: 6px; border-radius: var(--radius-sm); margin-bottom: 12px;
+}
+
+/* ---------- Autentikasi & formulir (TASK 2) ---------- */
+.auth { display: flex; flex-direction: column; gap: 20px; padding-top: 24px; }
+.auth-brand { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.auth-brand h1 { font-size: var(--fs-lg); }
+.auth-logo {
+  width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center;
+  background: linear-gradient(135deg, #5a5df0, #3b3ec4); color: #fff;
+}
+.seg { display: grid; grid-template-columns: 1fr 1fr; background: var(--surface); border-radius: 999px; padding: 4px; }
+.seg button { min-height: 44px; border-radius: 999px; color: var(--text-muted); }
+.seg button[aria-selected='true'] { background: #fff; color: #111; font-weight: 600; }
+
+.form { display: flex; flex-direction: column; gap: 8px; }
+.form label { font-size: var(--fs-sm); color: var(--text-muted); margin-top: 6px; }
+.form input {
+  width: 100%; min-height: 48px; padding: 12px 14px; font: inherit; font-size: 16px; /* 16px: cegah zoom iOS */
+  color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+}
+.form input:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.hint { font-size: var(--fs-xs); color: var(--text-muted); }
+.center { text-align: center; }
+.note { padding: 12px 14px; border-radius: var(--radius-sm); font-size: var(--fs-sm); }
+.note-ok { background: rgba(61, 220, 151, 0.12); color: var(--income); }
+.note-err { background: rgba(255, 107, 129, 0.12); color: var(--expense); }
+
+.btn { min-height: 48px; padding: 12px 18px; border-radius: 999px; font-weight: 600; margin-top: 10px; }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-secondary { background: var(--surface-2); color: var(--text); }
+.btn-ghost { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+.btn-danger { background: var(--expense); color: #1a0509; }
+.full { width: 100%; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.card h2 { font-size: var(--fs-md); margin-bottom: 8px; }
+.card p + p { margin-top: 8px; }
+.profile-card { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
+.profile-info { min-width: 0; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.profile-email { overflow-wrap: anywhere; font-weight: 600; }
+.avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--primary-soft); display: grid; place-items: center; flex: none; }
+.chip-soft { background: var(--primary-soft); color: #c3c5ff; }
+.notes { margin-bottom: 16px; }
+.confirm { border-color: var(--expense); }
+.splash { display: grid; place-items: center; min-height: 60vh; color: var(--text-muted); }
+code { font-size: 0.85em; background: var(--surface-2); padding: 1px 6px; border-radius: 6px; }

@@ -1,0 +1,35 @@
+/* Design tokens - tema gelap indigo (referensi UI) */
+:root {
+  --bg: #070815;
+  --bg-elev: #0f1128;
+  --surface: #151736;
+  --surface-2: #1c1f48;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --primary: #4f52e8;
+  --primary-soft: rgba(79, 82, 232, 0.18);
+  --primary-text: #ffffff;
+
+  --text: #f4f5ff;
+  --text-muted: #8f93c4;
+
+  --income: #3ddc97;
+  --expense: #ff6b81;
+  --transfer: #8f93c4;
+  --warn: #ffc857;
+
+  --radius-sm: 12px;
+  --radius: 20px;
+  --radius-lg: 28px;
+
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 2rem;
+
+  --nav-h: 68px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}

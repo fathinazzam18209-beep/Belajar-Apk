@@ -1,0 +1,23 @@
+{
+  "name": "personal-finance-tracker",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\"",
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "vite-plugin-pwa": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
